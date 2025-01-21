@@ -56,7 +56,7 @@ return [
     App\Providers\MiddlewareServiceProvider::class,
     App\Providers\JetstreamServiceProvider::class,
     App\Providers\MenuServiceProvider::class,
-    App\Providers\SettingsServiceProvider::class,
+  //  App\Providers\SettingsServiceProvider::class,
     App\Providers\RateLimiterServiceProvider::class,
 
 
