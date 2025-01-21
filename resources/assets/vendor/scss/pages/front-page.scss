@@ -1,0 +1,85 @@
+@use '../_bootstrap-extended/include' as light;
+@use '../_bootstrap-extended/include-dark' as dark;
+@import '../_custom-variables/support';
+@import '../_bootstrap-extended/mixins/misc';
+
+// Enable dark style
+$dark-style: true;
+
+// * Front Pages : Common Styles for ex: Navbar, footer etc...
+// *******************************************************************************
+
+// Variables
+@import './front/variables';
+
+// Common scss
+@import 'front/common';
+
+.frontend-wrapper {
+    padding-top: 70px; // For fixed navbar
+}
+
+// Hero Section
+.hero-section {
+    background: linear-gradient(45deg, rgba(var(--bs-primary-rgb), 0.04), rgba(var(--bs-primary-rgb), 0.08));
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+}
+
+// Features Section
+.features-section {
+    .card {
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: translateY(-5px);
+        }
+        .ti {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+// About Section
+.about-section {
+    img {
+        box-shadow: 0 0 50px rgba(var(--bs-primary-rgb), 0.1);
+    }
+}
+
+// Contact Section
+.contact-section {
+    background: linear-gradient(45deg, rgba(var(--bs-primary-rgb), 0.04), rgba(var(--bs-primary-rgb), 0.08));
+}
+
+// Footer
+.footer {
+    &-link {
+        color: light.$body-color;
+        text-decoration: none;
+        transition: color 0.15s ease-in-out;
+
+        &:hover {
+            color: var(--bs-primary);
+        }
+    }
+}
+
+// Dark style
+@include dark-layout-only {
+    .footer-link {
+        color: dark.$body-color;
+        &:hover {
+            color: var(--bs-primary);
+        }
+    }
+}
+
+// RTL
+@include light.rtl-only {
+    .hero-section {
+        .text-lg-start {
+            text-align: right !important;
+        }
+    }
+}

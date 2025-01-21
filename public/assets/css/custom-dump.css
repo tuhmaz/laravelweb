@@ -1,0 +1,15 @@
+/* Custom styles for var-dumper */
+.sf-dump-search-wrapper > input.sf-dump-search-input {
+    id: "dump-search";
+    name: "dump-search";
+}
+
+/* Override other dump styles */
+pre.sf-dump .sf-dump-search-wrapper > input.sf-dump-search-input {
+    max-width: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0.25em 0.5em;
+    font-size: 12px;
+    line-height: 1.5;
+}

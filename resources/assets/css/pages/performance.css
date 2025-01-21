@@ -1,0 +1,124 @@
+.performance-card {
+    transition: all 0.3s ease;
+    border-radius: 0.75rem;
+    background: var(--bs-card-bg);
+    border: 1px solid var(--bs-border-color);
+}
+
+.performance-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(var(--bs-primary-rgb), 0.1);
+}
+
+.metric-icon {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.75rem;
+    margin-right: 1rem;
+}
+
+.metric-icon i {
+    font-size: 1.5rem;
+}
+
+.metric-value {
+    font-size: 1.75rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 0.25rem;
+    color: var(--bs-heading-color);
+}
+
+.metric-label {
+    font-size: 0.875rem;
+    color: var(--bs-text-muted);
+    margin-bottom: 0.5rem;
+}
+
+.metric-trend {
+    font-size: 0.875rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.375rem;
+    margin-left: 0.5rem;
+}
+
+.metric-trend.up {
+    background-color: rgba(var(--bs-success-rgb), 0.1);
+    color: var(--bs-success);
+}
+
+.metric-trend.down {
+    background-color: rgba(var(--bs-danger-rgb), 0.1);
+    color: var(--bs-danger);
+}
+
+.progress-thin {
+    height: 4px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.chart-container {
+    height: 250px;
+    margin-top: 1rem;
+}
+
+.metric-card {
+    padding: 1.25rem;
+    border-radius: 0.75rem;
+    background: rgba(var(--bs-primary-rgb), 0.05);
+    margin-bottom: 1rem;
+}
+
+/* RTL Support */
+[dir="rtl"] .metric-icon {
+    margin-right: 0;
+    margin-left: 1rem;
+}
+
+[dir="rtl"] .metric-trend {
+    margin-left: 0;
+    margin-right: 0.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .performance-card {
+        margin-bottom: 1rem;
+    }
+    
+    .metric-icon {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .metric-value {
+        font-size: 1.5rem;
+    }
+}
+
+/* Dark Mode Support */
+[data-bs-theme="dark"] .performance-card {
+    background: var(--bs-card-bg);
+    border-color: var(--bs-border-color);
+}
+
+[data-bs-theme="dark"] .metric-card {
+    background: rgba(var(--bs-primary-rgb), 0.1);
+}
+
+/* Print Styles */
+@media print {
+    .performance-card {
+        break-inside: avoid;
+        box-shadow: none !important;
+        transform: none !important;
+    }
+    
+    .chart-container {
+        break-inside: avoid;
+    }
+}
