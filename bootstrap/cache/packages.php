@@ -65,6 +65,13 @@
       0 => 'Laravel\\Passport\\PassportServiceProvider',
     ),
   ),
+  'laravel/sail' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'Laravel\\Sail\\SailServiceProvider',
+    ),
+  ),
   'laravel/sanctum' => 
   array (
     'providers' => 
@@ -137,11 +144,29 @@
       0 => 'Carbon\\Laravel\\ServiceProvider',
     ),
   ),
+  'nunomaduro/collision' => 
+  array (
+    'providers' => 
+    array (
+      0 => 'NunoMaduro\\Collision\\Adapters\\Laravel\\CollisionServiceProvider',
+    ),
+  ),
   'nunomaduro/termwind' => 
   array (
     'providers' => 
     array (
       0 => 'Termwind\\Laravel\\TermwindServiceProvider',
+    ),
+  ),
+  'pixinvent/vuexy-laravel-bootstrap-jetstream' => 
+  array (
+    'aliases' => 
+    array (
+      'Jetstrap' => 'Pixinvent\\Jetstrap\\JetstrapFacade',
+    ),
+    'providers' => 
+    array (
+      0 => 'Pixinvent\\Jetstrap\\JetstrapServiceProvider',
     ),
   ),
   'rap2hpoutre/laravel-log-viewer' => 
@@ -170,6 +195,17 @@
     'providers' => 
     array (
       0 => 'Spatie\\CookieConsent\\CookieConsentServiceProvider',
+    ),
+  ),
+  'spatie/laravel-ignition' => 
+  array (
+    'aliases' => 
+    array (
+      'Flare' => 'Spatie\\LaravelIgnition\\Facades\\Flare',
+    ),
+    'providers' => 
+    array (
+      0 => 'Spatie\\LaravelIgnition\\IgnitionServiceProvider',
     ),
   ),
   'spatie/laravel-permission' => 
