@@ -95,8 +95,7 @@
     91 => 'App\\Providers\\MiddlewareServiceProvider',
     92 => 'App\\Providers\\JetstreamServiceProvider',
     93 => 'App\\Providers\\MenuServiceProvider',
-    94 => 'App\\Providers\\SettingsServiceProvider',
-    95 => 'App\\Providers\\RateLimiterServiceProvider',
+    94 => 'App\\Providers\\RateLimiterServiceProvider',
   ),
   'eager' => 
   array (
@@ -166,8 +165,7 @@
     63 => 'App\\Providers\\MiddlewareServiceProvider',
     64 => 'App\\Providers\\JetstreamServiceProvider',
     65 => 'App\\Providers\\MenuServiceProvider',
-    66 => 'App\\Providers\\SettingsServiceProvider',
-    67 => 'App\\Providers\\RateLimiterServiceProvider',
+    66 => 'App\\Providers\\RateLimiterServiceProvider',
   ),
   'deferred' => 
   array (

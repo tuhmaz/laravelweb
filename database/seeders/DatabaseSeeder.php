@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
       RolesTableSeeder::class,
       PermissionsTableSeeder::class,
       AdminUserSeeder::class,
-
+      SettingsSeeder::class,
   ]);
   }
 }
