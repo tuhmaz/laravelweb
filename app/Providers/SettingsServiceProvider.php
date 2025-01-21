@@ -23,7 +23,7 @@ class SettingsServiceProvider extends ServiceProvider
      *
      * @return void
      */
-    public function boot()
+  public function boot()
 {
     // Check if the settings table exists before attempting to load settings
     if (Schema::hasTable('settings')) {
