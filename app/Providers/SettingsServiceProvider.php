@@ -24,16 +24,20 @@ class SettingsServiceProvider extends ServiceProvider
      * @return void
      */
     public function boot()
-    {
-        // Check if the settings table exists before attempting to load settings
-        if (Schema::hasTable('settings')) {
-            // Load settings from the database
-            $settings = Setting::all();
+{
+    // Check if the settings table exists before attempting to load settings
+    if (Schema::hasTable('settings')) {
+        // Load settings from the database
+        $settings = Setting::all();
 
-            // Store each setting in the config
-            foreach ($settings as $setting) {
-                config()->set('settings.' . $setting->key, $setting->value);
-            }
+        // Store each setting in the config
+        foreach ($settings as $setting) {
+            config()->set('settings.' . $setting->key, $setting->value);
         }
+    } else {
+        // Use default settings if the table doesn't exist
+        config()->set('settings.site_name', 'Default Site Name');
+        config()->set('settings.site_description', 'Default Site Description');
     }
+}
 }
